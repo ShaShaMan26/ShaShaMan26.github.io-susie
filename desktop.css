@@ -565,12 +565,19 @@ embed {
         transition: opacity .3s ease;
     }
 }
+.center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
 .bio {
     display: flex;
     justify-content: space-between;
-    gap: 2%;
+    gap: 1%;
     align-items: center;
-    margin-top: 2%;
+    width: 95%;
     .biotext {
         font-family: open-sans;
         background-color: #abb0a570;
