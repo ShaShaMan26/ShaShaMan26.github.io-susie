@@ -71,6 +71,7 @@ body {
         width: 80%;
         a:hover {
             color: #b08968;
+            text-decoration: none;
         }
         img {
             border-radius: 1%;
@@ -586,6 +587,9 @@ embed {
         h2 {
             margin: 0;
         }
+    }
+    img {
+        height: auto !important;
     }
 }
 @media screen and (max-width: 768px) {
