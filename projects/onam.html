@@ -60,8 +60,108 @@
             <div id="detail">
                 <!--Development History-->
                 <h2>Development History</h2>
-                <p>This game was recently released and will be receiving a proper article soon. You can play it for free <a href="https://shashamang.itch.io/one-night-at-mikus" target="_blank">here</a>!</p>
-                
+                <p>
+                    The idea for One* Night at Miku's came similarly to that of Sha's Tetris and Undertale Battle Engine. I was playing through the Five Nights 
+                    at Frickbear's games (a series of Five Nights at Freddy's fan games) and thought, "Hey, I could probably make something like this!"
+                <br><br>
+                    While Frickbear's 3 is a well-renowned, polished, and expansive game, the first two in the series are scrappy Scratch games which reuse and 
+                    reference many ideas. Having spent the previous two years of my life developing large-scale projects that now lie in varying states of
+                    immaterial, I was inspired by the games' unabashed silliness and wanted to carry such an approach into my own work. Taking everything so 
+                    seriously had caused me to never make anything at all. And here were two complete games that I had just played. Games that were fun, games 
+                    that didn't take themselves so seriously, games that were done! I decided I would attempt to rid myself of perfectionism by practicing “better is
+                    best.” This methodology is what guided my work on One* Night at Miku's.
+                <br><br>
+                    Starting with its...
+                </p>
+
+                <h2>Design</h2>
+                <p>
+                    In the spirit of low-stakes development, I made various scope cutting decisions early on:
+                </p>
+                <ol>
+                    <li>The majority of assets would be reused, specifically from various games in the FNaF series.</li>
+                    <li>The base gameplay loop will take heavy inspiration from that of FNaF 1.</li>
+                    <li>The game will aim to have high replayability in order to maximize playtime per development time.</li>
+                    <p>And most importantly,</p>
+                    <li>The codebase will be messy, hacky, and spaghetti-y. And that WILL be ok.</li>
+                </ol>
+                <p>
+                    With ground rules in place, work began on planning out the game's systems and mechanics. Continuing to take inspiration from Frickbear's,
+                    I wanted to create a frantic and fast-paced gameplay loop where players feel like they're “patting their head and rubbing their tummy.”
+                    This would be achieved by an ever-increasing number of roguelike style upgrades that complicate things as much as they helped.
+                <br><br>
+                    In order to create such upgrades, a flexible (and slightly simplistic) base first had to be devised. To help with the pacing of development,
+                    I decided to split the work into two phases:
+                </p>
+                <ol>
+                    <li>Nighttime gameplay.</li>
+                    <li>Roguelike progression.</li>
+                </ol>
+                <p>With the ability to focus solely on the night gameplay, I prototyped a recreation of the FNaF 1 office, along with its camera system.</p>
+
+                <p>As is tradition at this point, I used an image of a Miku plush as a placeholder to test the cameras.</p>
+
+                <p>
+                    I sent this prototype to a few friends to get their reactions and found it hilarious when they would tense up at the sight of a FNaF game,
+                    only to open the cameras and see Miku's silly little face staring back at them. This juxtaposition, when struck across my commitment to
+                    unseriousness, sparked what would become the core of the project in my mind.
+                    <br><br>
+                    However, while I was excited to stoke the flames of comedic juxtaposition, I was also deeply interested in making a fun game that would
+                    engage players. As such, I took the time to interrogate the design of FNaF-style games. Having grown up with the series and its fangames,
+                    I had my own opinions about what made a FNaF game "fun." And to me, that was its moment to moment decision making.
+                    <br><br>
+                    With each game came a new set of rules to learn and threats to keep track of. The trial and error of figuring out how everything works feels
+                    almost playful in the way that the games purposefully drew your attention, guiding your discoveries. And then, once you'd come to understand
+                    the bounds of the game, the ways that your skills were tested by emergent moments of novel setups. Like a finding checkmate on an
+                    in-progress chess board. Finally besting the odds just to come back and do it again for another night, but this time there's even less room
+                    for error.
+                    <br><br>
+                    Those were the feelings I wanted to capture with my design, and I wanted to explore them through the lens of a much more action-oriented 
+                    take on the genre. Much closer to FNaF 2 or UCN than FNaF 1 or 6.
+                </p>
+
+                <p>And with that, we had…</p>
+
+                <h2>One Night at Miku's</h2>
+                <p>Implementing the features outlined in the design document was relatively straightforward. I first started with the three main Mikus.</p>
+
+                <p>Then I added the vents and Green.</p>
+
+                <p>And finally the Mikulings.</p>
+
+                <p>
+                    New to my workflow on this project, I regularly sent updated builds to friends as they were completed. This not only gave me a constant
+                    stream of feedback, but also helped to build forward momentum for the project as a whole. It also incentivized me to finalize
+                    implementations instead of leaving systems mostly-working which helped to avoid a lot of technical debt.
+                    <br><br>
+                    It was because of this feedback that I decided to include difficulty modes. From the start, One* Night at Miku's was developed with fans of 
+                    not only FNaF, but FNaF fangames in mind. However, the one night nature of the game led to a learning curve too steep for players unfamiliar 
+                    with FNaF conventions.
+                    <br><br>
+                    I was also able to refine the Mikus' ai in response to playtests, tuning for just the right game feel and flow. Some examples include:
+                </p>
+                <ul>
+                    <li>
+                        Red and Yellow Miku originally said "Miku dayo" when at the doors, but this made it so you never had to check the office when in the cams.
+                    </li>
+                    <li>
+                        Blue Miku would only say "seeeeggaaaa" when at the door and her call would be directional. This made her a one-note threat and so I 
+                        made changes to keep her progress in the back of players' minds at all times.
+                    </li>
+                    <li>
+                        Green Miku's movement was random. This meant he could enter the same vent over and over and over again as well as just wondering with no
+                        rhyme or reason. By making him pick a target, players are encouraged to study his movements more closely and try to predict his next
+                        move. Also, vent seals being a one-time solution felt more natural in an action context.
+                    </li>
+                </ul>
+                <p>By this point I had spent some time working on the games menus and UI, leaving the overall package feeling relatively complete.</p>
+
+                <p>But it was still missing…</p>
+
+                <h2>The Asterisk</h2>
+
+                <h2>The Last Twenty Percent...</h2>
+
                 <!-- <p></p> -->
                 <!--// gifs of shit.-->
                 <!-- <div class="example">
