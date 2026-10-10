@@ -61,17 +61,11 @@
                 <!--Development History-->
                 <h2>Development History</h2>
                 <p>
-                    The idea for One* Night at Miku’s came similarly to that of Sha’s Tetris and Undertale Battle Engine. I was playing through the Five Nights at
-                    Frickbear’s games (a series of Five Nights at Freddy’s fan games) and thought, “Hey, I could probably make something like this!”
+                    The idea for One* Night at Miku’s came similarly to that of <a href="./shas-tetris.html">Sha's Tetris</a> and <a href="./ube.html">Undertale Battle Engine</a>. I was playing through the <a href="https://gamejolt.com/games/frickbears/698667" target="_blank">Five Nights at Frickbear’s</a> games (a series of <a href="https://en.wikipedia.org/wiki/Five_Nights_at_Freddy%27s" target="_blank">Five Nights at Freddy’s</a> fan games) and thought, “Hey, I could probably make something like this!” 
                 <br><br>
-                    While Frickbear’s 3 is a well-renowned, polished, and expansive game, the first two in the series are scrappy Scratch games which reuse and reference
-                    many ideas. Having spent the previous two years of my life developing large-scale projects that now lie in varying states of immaterial, I was inspired
-                    by the games’ unabashed silliness and wanted to carry such an approach into my own work. Taking everything so seriously had caused me to never make
-                    anything at all. And here were two complete games that I had just played. Games that were fun, games that didn’t take themselves so seriously, games
-                    that were done! I decided I would attempt to rid myself of perfectionism by practicing “better is best.” This methodology is what guided my work on
-                    One* Night at Miku’s. 
+                    While <a href="https://gamejolt.com/games/frickbears3/930477" target="_blank">Frickbear’s 3</a> is a well-renowned, polished, and expansive game, the first two in the series are scrappy <a href="https://scratch.mit.edu/" target="_blank">Scratch</a> games which reuse and reference many ideas. Having spent the previous two years of my life developing large-scale projects that now lie in <a href="./project-one.html">varying</a> <a href="./sokoban.html">states</a> of <a href="./sesame.html">immaterial</a>, I was inspired by the games’ unabashed silliness and wanted to carry such an approach into my own work. This methodology is what guided my work on One* Night at Miku’s.
                 <br><br>
-                    Starting with its-
+                    Starting with its…
                 </p>
 
                 <h2>Design</h2>
@@ -86,13 +80,11 @@
                     <li>The codebase will be messy, hacky, and spaghetti-y. And that WILL be ok.</li>
                 </ol>
                 <p>
-                    With ground rules in place, work began on planning out the game’s systems and mechanics. Continuing to take inspiration from Frickbear’s, I wanted to
-                    create a frantic and fast-paced gameplay loop where players feel like they’re constantly “patting their head and rubbing their belly.” It’s common for
-                    FNaF games to throw new things at the player each night, but I wanted a system that encouraged decision making. The actual nighttime gameplay wouldn’t
-                    change, but it would be progressively modified until it became controlled chaos.
+                    With ground rules in place, work began on planning out the game’s systems and mechanics. Continuing to take inspiration from Frickbear’s, I wanted to create a frantic and fast-paced gameplay loop where players feel like they’re constantly “patting their head and rubbing their belly.” Normally this effect is achieved by introducing new threats after each night, but I had decided (for more scope reasons) that the actual nighttime gameplay would be fixed. Instead, the use of modifiers would add new folds to the pre-existing nightly structure, maintaining a difficulty curve and placing more agency in the hands of players (as well as upping replayability.)
                 <br><br>
-                    Since the base night gameplay was fixed, I split development in half. I would first build the basic nightly gameplay loop and then build the modifiers
-                    on top. With the ability to focus solely on the night gameplay, I prototyped a recreation of the FNaF 1 office, along with its camera system.
+                    Due to this structure, development was split into a series of phases. First I would build the core nightly gameplay. Then I would move to the game’s menus and settings. After that, I would expand on top of the base that had been created with modifiers. Finally I would wrap it all together with a system of meta-progression. By layering work on the game in this way, my focus could move mostly linearly through a tangled web of interlocking systems.
+                <br><br>
+                    To start, I prototyped a recreation of the FNaF 1 office, along with its camera movement and doors.
                 </p>
 
                 <div class="example">
@@ -100,27 +92,23 @@
                     <img src="/resources/gif/onam/door.gif">
                 </div>
 
-                <p>As is tradition at this point, I used an image of a Miku plush as a placeholder to test the cameras.</p>
+                <p>
+                    When testing the cameras, I needed an image to act as a placeholder for what would eventually become some variation of animatronics. And so, as is tradition at this point, I used an image of a Miku plush.
+                </p>
 
                 <div class="example">
                     <img src="/resources/gif/onam/miku.gif" class="singleimg">
                 </div>
 
                 <p>
-                    I sent this prototype to a few friends to get their reactions and found it hilarious when they would tense up at the sight of a FNaF game,
-                    only to open the cameras and see Miku's silly little face staring back at them. This juxtaposition, when struck across my commitment to
-                    unseriousness, sparked what would become the core of the project in my mind.
+                    I sent this prototype to a few friends to get their reactions and found it hilarious when they would tense up at the sight of a FNaF game, only to then open the cameras and see Miku’s silly little face staring back at them. This juxtaposition, when struck across my commitment to unseriousness, sparked what would become the core of the project in my mind.
                 <br><br>
                     However, while I was excited to stoke the flames of comedic juxtaposition, I was still deeply interested in making an engaging game. I wanted players to
                     get in the door thinking, “what a joke, this is hilarious!” and leave, “I can’t believe I got hooked on such a goofy game. That was surprisingly
                     compelling.” As such, I took the time to interrogate the design of FNaF-style games. Having grown up with the series and its fangames, I had my own
                     opinions about what made a FNaF game “fun.” And to me, that was its moment to moment decision making.
                 <br><br>
-                    With each game came a new set of rules to learn and threats to keep track of. The trial and error of figuring out how everything works feels
-                    almost playful in the way that the games purposefully drew your attention, guiding your discoveries. And then, once you'd come to understand
-                    the bounds of the game, the ways that your skills were tested by emergent moments of novel setups. Like a finding checkmate on an
-                    in-progress chess board. Finally besting the odds just to come back and do it again for another night, but this time there's even less room
-                    for error.
+                    With each game comes a new set of rules to learn and threats to keep track of. The trial and error of figuring out how everything works playfully invites players to view the game’s world with wonder and excitement. Curiosity is rewarded and complacency is stamped out as mastery is tested. Whereas most games primarily challenge players executionally, FNaF-style experiences encourage players to attempt to understand the things around them. By immersing players in this way they form personal relationships with the game as a whole, which manifests in their unique approach and strategies. The magic, then, is when this connection between player and game is reciprocated. By night 2 the game expects players to know how to do X, but only by also doing Y. Performing Y grows to conflict with X as a new wrinkle is introduced. Players then respond by readjusting their approach, gaining deeper knowledge of the system as a whole in the process.
                 <br><br>
                     Those were the feelings I wanted to capture with my design, and I wanted to explore them through the lens of a much more action-oriented 
                     take on the genre. Much closer to FNaF 2 or UCN than FNaF 1 or 6.
@@ -164,9 +152,7 @@
                 </div>
 
                 <p>
-                    New to my workflow on this project, I regularly sent updated builds to friends as they were completed. This not only gave me a constant
-                    stream of feedback, but also helped to build forward momentum for the project as a whole. It also incentivized me to finalize
-                    implementations instead of leaving systems mostly-working which helped to avoid a lot of technical debt.
+                    New to my workflow on this project, I regularly sent updated builds to friends as they were completed. This not only gave me a constant stream of feedback, but also helped to build forward momentum on the project as a whole. This also aided in avoiding technical debt as the need for systems to be semi-presentable incentivized their implementations to be more complete than that of a controlled prototype.
                 </p>
 
                 <div class="example">
@@ -178,11 +164,9 @@
                 </div>
 
                 <p>
-                    It was because of this feedback that I decided to include difficulty modes. From the start, One* Night at Miku's was developed with fans of 
-                    not only FNaF, but FNaF fangames in mind. However, the one night nature of the game led to a learning curve too steep for players unfamiliar 
-                    with FNaF conventions.
+                    Many changes were made early on in response to the feedback gathered. For example, many playtesters found the initial learning curve too punishing to climb. One* Night at Miku’s was developed from the start with fans of not only FNaF, but its fangames as well and so a basic level of familiarity was expected. However, the unchanging nightly structure did leave onboarding extremely harsh for those completely unfamiliar with FNaF conventions in a way that other games of this type do not face. So in order to make the game more accessible, I implemented a difficulty select which ended up making it all the way to the final release. 
                     <br><br>
-                    I was also able to refine the Mikus' ai in response to playtests, tuning for just the right game feel and flow. Some examples include:
+                    Feedback from playtests also helped in the refining of the Mikus’ ai. Some examples include:
                 </p>
                 <ul>
                     <li>
@@ -198,7 +182,9 @@
                         move. Also, vent seals being a one-time solution felt more natural in an action context.
                     </li>
                 </ul>
-                <p>By this point I had spent some time working on the games menus and UI, leaving the overall package feeling relatively complete.</p>
+                <p>
+                    By this point I had spent some time working on the games menus and UI, leaving the overall package feeling relatively complete. It was around this time that I created a demo which I shared alongside a feedback form to further gather players’ thoughts on the game. Seeing people enjoy the experience made me confident that I was making something worthwhile.
+                </p>
 
                 <p>But it was still missing…</p>
 
@@ -208,7 +194,7 @@
                     With the base game in a somewhat complete state, I was able to shift my attention to developing the modifiers. For their design, I took inspiration
                     from real life game modding. I wanted the changes they brought to feel coherent to the game as a whole, but just janky enough as to still be a little
                     out of place. To this end, prioritizing the development of the base gameplay was a large boon. Not only did having a pre-existing framework to slot
-                    ideas in and out of help when devising new mods, but it also allowed their existence, down to the programming, to mimic that of a real game mod.
+                    ideas in and out of help when designing new mods, but it also allowed their existence, down to the programming, to mimic that of a real game mod.
                 </p>
 
                 <div class="example">
@@ -223,8 +209,7 @@
                 </div>
 
                 <p>
-                    While each mod has a pro and a con, attributes were developed individually. This allowed me to explore an idea to its fullest, and then see where it
-                    fit in later. Developing this way also made it efficient to mix and match the effects of mods in attempts to find interesting and emergent combinations.
+                    While each mod is made up of a pro and con, their attributes were developed individually. This allowed me to explore an idea to its fullest, and then see where it fit in later. Developing this way also made it easy to mix and match attributes in attempts to ideate and find interesting combinations.
                 </p>
                 
                 <div class="example">
@@ -237,7 +222,7 @@
                 </div>
 
                 <p>
-                    Naturally a few mods were left on the cutting room floor, but I am quite proud of the 11 in the game today.
+                    Naturally a few modifiers were left on the cutting room floor, but I am quite proud of the selection in the game today.
                 </p>
                 
                 <div class="example">
@@ -256,11 +241,11 @@
                     <figcaption>Unused modifier ideas from the above mentioned notes app list.</figcaption>
                 </div>
 
-                <p>With mods to make each night feel new, it was time to implement meta-progression.</p>
+                <p>With mods to make each night feel new, it was time to implement meta-progression. This was around the time that the run system was implemented along with its accompanying menus.</p>
 
-                <p>Now all that’s left is to tie it all together! Should be easy, right? Well, you know what they say:</p>
+                <p>By this point I was feeling pretty good about the project and was hopeful that it would release only a little while later. But you know what they say…</p>
 
-                <h2>The Last Twenty Percent...</h2>
+                <h2>The Last Twenty Percent</h2>
 
                 <p>
                     …is always 80% of the work. I would repeat this phrase over, and over, and over, and over again for the ensuing 4 months it took to release One* Night
@@ -282,9 +267,9 @@
                 </div>
 
                 <p>
-                    I finally got around to making the tutorial! This was a white whale that loomed over me during most of the project. So much of what I enjoy about FNaF games is their sense of self-guided discovery and I struggled to preserve that while still ensuring first time players knew enough going in to have a fighting chance from the start. Initially I outlined a guided tour of the game which would be delivered by a character on the phone (as is tradition.) However, it felt too restrictive and honestly reminded me of forceful mobile game onboarding. Thinking maybe I wouldn’t reinvent the wheel for once, I then played around with having a classic nightly phone call that would explain the basics to players as they were already in the hot seat. While this did technically work, players’ attention was split between so many new things to learn that they struggled to retain much of use. Beyond this, the unchanging nature of nights in One* Night at Miku’s meant that the Mikus became active far too soon for any explanation to not feel rushed. 
+                    Throughout development, work on a tutorial loomed over me like a white whale. So much of what I enjoy about FNaF games is their sense of self-guided discovery and I struggled to preserve that while still ensuring first time players knew enough going in to have a fighting chance. Initially I outlined a guided tour of the game which would be delivered by a character on the phone (as is tradition.) However, it felt too restrictive and honestly reminded me of forceful mobile game onboarding. Thinking maybe I wouldn’t reinvent the wheel for once, I then played around with having a classic nightly phone call that would explain the basics to players as they were playing. While this did technically work, players’ attention was split between so many new things to learn that they struggled to retain much of use. Beyond this, the unchanging nature of nights in One* Night at Miku’s meant that the Mikus became active far too soon for any explanation to not feel rushed. 
                 <br><br>
-                    And that was where things stood for the majority of development. Just this looming dread that I’d have to figure it out sometime. Eventually, though, I settled on a mix of the two concepts. By having a self contained introduction to the game’s systems, players were able to learn the ropes without distraction. But by keeping specific information about each miku withheld, players still got to experiment on their own. Adding a few nightly calls also provided more forward movement to the game’s pacing, as well as maintaining the modifiers’ surprise introduction. This approach felt the most like teaching players how to fish, without doing it for them, or telling them just what kind of fish they might find…
+                    Eventually, I settled on a mix of the two concepts. By having a self contained introduction to the game’s systems, players were able to learn the ropes without distraction. But by limiting information to the operation of the game’s systems, players still got to discover the Mikus on their own. Adding a few nightly calls throughout the run also provided more forward movement to the game’s pacing, as well as maintaining the modifiers’ surprise introduction. This approach felt the most like teaching players how to fish, without doing it for them, or telling them just what kind of fish they might find…    
                 <br><br>
                     For the phone character itself, I went through various drafts of its script. Finding the right balance of vague but informative was surprisingly difficult, and it wasn’t made any easier by my constantly changing character concepts. First it was an uninterested part-time worker, then a bumbling intern, then a well-meaning manager, then an asshole coworker, then the friend whose shift you’re covering, then,,, like,, Joel Last of Us???? I was all over the place and couldn’t land on one thing. Partly because I couldn’t get the voice right, but also because I (wanting to do the voice) couldn’t get the voice right. The final version is the result of me reaching my breaking point and falling back on the safe idea I had from the start. The tutorial voice being a little quirky with it came naturally because I’m just like that I guess.
                 </p>
@@ -302,7 +287,7 @@
                 </div>
 
                 <p>
-                    With a tutorial finally in place, and a semblance of a narrative forming in the nightly calls, I realized I would probably need a more definitive ending than just a results screen. I’m not gonna explain the joke, I’m just gonna leave this here…
+                    With a tutorial finally in place, and a semblance of a narrative forming in the nightly calls, I realized I would probably need a more definitive ending than just a results screen. I’m not going to explain the joke, I’m just gonna leave this here…
                 </p>
 
                 <div class="example">
@@ -311,7 +296,7 @@
                 </div>
 
                 <p>
-                    The final torment I faced in this phase of development was the Shadows. Both Office and Camera Shadow were originally modifier attributes, but they felt too substantial of a change to sit alongside the other mods. For a while they sat unused but as the game’s undertones grew darker, I thought it might be fun if they were semi-random encounters. Like entities outside of the game making their way in. At first there was no way to tell if a modifier was cursed, but in the spirit of interesting decision making based on ever-growing game knowledge, I made sure to add a way to tell. The hang up, then, was balancing their inclusion into the already stuffed gameplay loop.
+                    One of the last hurdles I had to get through in this phase of development were the Shadows. Both Office and Camera Shadow were originally modifier attributes, but they felt too substantial of a change to sit alongside the other mods. For a while they sat unused but as the game’s undertones grew darker, I thought it might be fun if they were semi-random encounters. Like entities outside of the game making their way in. At first there was no way to tell if a modifier was cursed, but in the spirit of interesting decision making based on ever-growing game knowledge, I made sure to add a way to tell. The hang up, then, was balancing their inclusion into the already stuffed gameplay loop.
                 <br><br>
                     The biggest struggle was deciding how present I wanted the shadows to be. I wanted them to be more like a haunting than a constant threat, and I liked how they could throw an unexpected wrench into players’ flow. The best example of this interplay was the late redesign of Camera Shadow. From first inclusion, it would appear on either cam 3 or 4 and then need to be stared at like in the final game. However, when it disappeared it would then move to another camera farther from the office, totaling three times the player needed to stare at it for it to finally go away. I enjoyed the sense of place that this mechanic gave to the location, but felt it reached outside of a supporting role.
                 </p>
@@ -324,29 +309,36 @@
                     <figcaption>Beta Camera Shadow interaction.</figcaption>
                 </div>
 
-                <p>At last One* Night at Miku’s was complete! It was finally time for…</p>
+                <p>
+                    Then, one day, I sat down to work on the game and, after months of slowly chipping away at it, found that I had nothing new to do. The game felt polished, bug-free, and, like, fun???
+                    <br><br>
+                    It was finally time for…</p>
 
                 <h2>Release</h2>
 
                 <p>
-                    One* Night at Miku’s was the first independent game I gave a proper release and so I have some overall thoughts about the process.
+                    I have no idea how to promote myself or my work. Despite this, I attempted to give One* Night at Miku’s a proper public release.
                 <br><br>
-                    When it comes to the game’s storepage, I pulled from conventional wisdom and did my best to include kinetic and varied screenshots, an eye-catching layout, and an enticing but easy to digest description. I centered messaging around the easy to understand (and hopefully compelling) phrase: “a rogue-like fnaf fangame.” This seemed to capture people’s attention, and gave a good introduction to what the game was about.
+                    For the game’s storepage, I followed conventional wisdom you’d get from any GDC talk. Include kinetic and varied screenshots, have an eye-catching layout, make sure your description is informative but punchy, etc… New for me though, was the creation of a trailer. I had cut together simple showcases for my projects before, but never in attempts to market them. So I decided to keep it simple.
                 <br><br>
-                    More unstructured, though, was the promotion of the game on Twitter and Youtube. I have no idea how to promote myself or my work, so I just put together a trailer and some clips that could be released periodically to hopefully attract attention. Begging for attention online feels gross so I limited the campaign to only a week before launch. I scheduled most uploads in advance and monitored the reaction. To my surprise a few people actually engaged with my posts!
+                    When making the trailer, I focused less on showcasing direct gameplay (it’s not flashy and the interesting bit is what’s going on inside players’ heads anyway) and instead attempted to communicate the overall feel of the experience. As such, I turned to frantic cuts, bold text (mimicking that found in the game itself), and an air of mystique. Banking on the silly premise to get people in the door, I hoped to capture viewers’ curiosity by overwhelming them with so many tastes of what the game has in store that they’d just have to give it a try.    
+                <br><br>
+                    In the week leading up to release, I would also post a short clip or screenshot to Twitter. I hoped that by teasing off some of the game’s unique twists, it would build anticipation. Social media doesn’t really make sense to me, so I produced said materials all together and scheduled their uploads ahead of time. Luckily a few people engaged with the posts (specifically the early ones) which vindicated my approach. Of course, One* Night at Miku’s was not some runaway success, but I’m just happy anyone played it at all. And while this was a good exercise in promotion, I hope that my next project will be able to carry itself more so on premise alone.
                 </p>
-
-                <!-- <p></p> -->
-                <!--// gifs of shit.-->
-                <!-- <div class="example">
-                    <img src="">
-                    <img src="">
-                    <img src="">
-                </div> -->
 
                 <!-- Reflections -->
                 <h2>Postmortem</h2>
-                <p></p>
+                <p>
+                    As much as development of One* Night at Miku’s was drawn out and sloppy, I am very proud of the final product. It is by far the most polished and complete package I had released at the time and I’d like to think it’s even pretty fun. Somehow there’s still things I didn’t get to talk about above, so I’d like to take the time to cover them now:
+                <br><br>
+                    About half way through work on the modifiers, I experienced what can only be described as psychosis. I was convinced that players would always choose easier modifiers in order to make it to the end. So I experimented with awarding tokens when performing various actions which could be spent on temporary upgrades. The idea was that harder modifiers would give more tokens so players would challenge themselves more in order to get tokens. But, of course, this was a stupid idea as it made more daring players have an easier time while leaving struggling players behind. Plus, this whole thing was just the result of poor modifier balancing which got refined naturally over time anyways so…
+                <br><br>
+                    For as much as One* Night at Miku’s has an artstyle, it was inspired by early fnaf fangames from around the time of FNAF 1 through 3. Specifically, those that edited pre-existing assets and made something new with them. I’ve always enjoyed creators who remix works into something coherent yet distinct and wanted to capture that in this project. The slapped together look was furthered by my commitment to doing things simply if they made me laugh. For example, when designing the different Mikus, I laughed so hard and for so long when I just used the paint bucket tool to change the color of the png that I couldn’t not lean into it.
+                <br><br>
+                    With the easter eggs and secrets in the game, I wanted to include them not only because they’re fun, but also as to help each playthrough feel more varied. I really enjoy surprising players and I was literally kicking my feet while laying in bed watching playtesters’ reactions to some of the random events I included. Even though the game at its core is very simple, small additions like those go a long way in encouraging and rewarding attentive play. Plus it hopefully gives people something to discuss about the game.
+                <br><br>
+                    Overall,
+                </p>
             </div>
         </div>
     </body>
